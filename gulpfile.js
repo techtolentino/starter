@@ -9,12 +9,13 @@ var gulp = require('gulp'),
     webserver = require('gulp-webserver'),
     uglify = require('gulp-uglify');
 
-// Scripts task, uglifies Javascript files
-gulp.task('scripts', function(){
-  gulp.src('js/*.js')
-    .pipe(plumber())
-    .pipe(uglify())
-    .pipe(gulp.dest('build/js'));
+// Server task
+gulp.task('webserver', function() {
+  gulp.src('./')
+    .pipe(webserver({
+      livereload: true,
+      open: true
+    }));
 });
 
 // Styles task, minifies with sourcemaps
@@ -30,18 +31,24 @@ gulp.task('styles', function(){
     .pipe(gulp.dest('build/css'))
 });
 
-// Server
-gulp.task('webserver', function() {
-  gulp.src('./')
-    .pipe(webserver({
-      livereload: true,
-      open: true
-    }));
+// Scripts task, uglifies Javascript files
+gulp.task('scripts', function(){
+  gulp.src('js/*.js')
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'));
+});
+
+// HTML task
+gulp.task('html', function() {
+  gulp.src('*.html')
+  .pipe(gulp.dest('build/'));
 });
 
 // Watch task, watches changes to Javascript and SCSS
 gulp.task('watch', function(){
   gulp.watch('js/*.js', ['scripts']);
+  gulp.watch('*.html', ['html']);
   gulp.watch('scss/**/*.scss', ['styles']);
 });
 
