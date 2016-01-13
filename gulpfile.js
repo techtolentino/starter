@@ -26,6 +26,7 @@ gulp.task('styles', function(){
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer({browsers: 'last 2 versions'}))
     .pipe(sourcemaps.write())
+    .pipe(gulp.dest('css'))
     .pipe(gulp.dest('build/css'))
 });
 
