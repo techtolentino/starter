@@ -1,10 +1,18 @@
 #Sudden 
-### An extra simple Gulp starter pack
+#### An extra simple Gulp starter pack  
+<br>
+  
+  
 
-####What you'll need  
 
-install [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)
 
+###What you'll need  
+
+install [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)  
+<br>  
+<hr>  
+  
+  
 ####Installation
 
 By running the following commands in your terminal, this _should_ get you going.
@@ -12,7 +20,7 @@ By running the following commands in your terminal, this _should_ get you going.
 - `git clone`
 - `npm install`
 - `gulp`
-- navigate browser to `localhost:8000`  
+- navigate Chrome browser to `localhost:8000`  
 
 ####What's included
 
@@ -22,8 +30,12 @@ By running the following commands in your terminal, this _should_ get you going.
 - Scss Lint
 - Autoprefixer
 - Webserver
-- Uglify
+- Uglify  
 
+
+<br>
+  
+  
 ### Maker
 [Randy Tolentino](http://randytolentino.com/)  
 [@techtolentino](https://twitter.com/techtolentino)
