@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     scsslint = require('gulp-scss-lint'),
     autoprefixer = require('gulp-autoprefixer'),
+    webserver = require('gulp-webserver'),
     uglify = require('gulp-uglify');
 
 // Scripts task, uglifies Javascript files
@@ -26,6 +27,15 @@ gulp.task('styles', function(){
     .pipe(autoprefixer({browsers: 'last 2 versions'}))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('build/css'))
+});
+
+// Server
+gulp.task('webserver', function() {
+  gulp.src('./')
+    .pipe(webserver({
+      livereload: true,
+      open: true
+    }));
 });
 
 // Watch task, watches changes to Javascript and SCSS
