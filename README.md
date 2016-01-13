@@ -3,7 +3,7 @@
 
 ####What you'll need  
 
-install [LiveReload]('https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en')
+install [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)
 
 ####Installation
 
@@ -11,9 +11,10 @@ By running the following commands in your terminal, this _should_ get you going.
 
 - `git clone`
 - `npm install`
-- `gulp`  
+- `gulp`
+- navigate browser to `localhost:8000`  
 
-####What's Included
+####What's included
 
 - Sass
 - Sourcemaps
@@ -23,3 +24,6 @@ By running the following commands in your terminal, this _should_ get you going.
 - Webserver
 - Uglify
 
+### Maker
+[Randy Tolentino](http://randytolentino.com/)  
+[@techtolentino](https://twitter.com/techtolentino)
