@@ -21,7 +21,9 @@ gulp.task('webserver', function() {
 // Styles task, minifies with sourcemaps
 gulp.task('styles', function(){
   gulp.src('scss/**/*.scss')
-    .pipe(scsslint())
+    .pipe(scsslint({
+        "config": "scss-lint-config.yml"
+    }))
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sass({outputStyle: 'compressed'}))
