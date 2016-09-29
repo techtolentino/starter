@@ -1,9 +1,9 @@
 body {
+    background: $background-color;
+    color: $text-color;
     font-family: $base-font-family;
     font-size: $base-font-size * 1.25;
     font-weight: $base-font-weight;
-    color: $text-color;
-    background: $background-color;
     line-height: $base-line-height + .15;
 }
 
