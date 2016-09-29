@@ -20,7 +20,7 @@ gulp.task('webserver', function() {
 
 // Styles task, minifies with sourcemaps
 gulp.task('styles', function(){
-  gulp.src('scss/**/*.scss')
+  gulp.src(['scss/**/*.scss', '!scss/_reset.scss'])
     .pipe(scsslint({
         "config": "scss-lint-config.yml"
     }))
