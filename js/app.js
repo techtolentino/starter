@@ -1,6 +1,6 @@
 // store each checklist val
 var checkListItems = Array.prototype.slice.call(
-    document.getElementsByClassName("checklist--item")
+    document.getElementsByClassName("checklist--item-status")
 );
 
 checkListItems.forEach(function(item){

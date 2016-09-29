@@ -1,12 +1,12 @@
 {
   "name": "starter-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "An onboarding Starter kit for new team members",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Randy Tolentino",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.0",
