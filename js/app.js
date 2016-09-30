@@ -14,7 +14,6 @@ checkListItems.forEach(function(item){
     // saving checkbox to store
     item.addEventListener("change", function() {
         window.localStorage.setItem(checkBox, item.checked)
-        console.log(localStorage);
     });
 });
 

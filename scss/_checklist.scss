@@ -1,6 +1,13 @@
 .checklist {
-    &--section {
+    &--info {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: $base-spacing-unit / 4;
     }
 
-
+    &--item-status {
+        margin-left: $base-spacing-unit;
+        width: $base-spacing-unit * 2;
+    }
 }
