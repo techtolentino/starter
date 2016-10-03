@@ -1,15 +1,30 @@
 .checklist {
     &--info {
-        align-items: center;
+        border: 1px solid $gray-color;
         display: flex;
-        justify-content: space-between;
-        padding-bottom: $base-spacing-unit / 4;
+        justify-content: space-around;
+        margin-bottom: $base-spacing-unit;
     }
 
     &--item-status {
-        padding-left: $base-spacing-unit;
-        width: $base-spacing-unit * 2;
-        height: $base-spacing-unit * 2;
-        border: 1px solid red;
+        background: lighten($gray-color, 5%);
+        margin-right: $base-spacing-unit / 2;
+        width: $base-spacing-unit * 4;
+
+        &:hover {
+            background: $gray-color;
+            cursor: pointer;
+        }
+    }
+
+    &--item-description {
+        padding-bottom: $base-spacing-unit / 3;
+        padding-top: $base-spacing-unit / 3;
+    }
+
+    &--item-more {
+        align-self: center;
+        text-align: center;
+        width: $base-spacing-unit * 3;
     }
 }
