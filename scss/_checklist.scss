@@ -4,27 +4,36 @@
         display: flex;
         justify-content: space-around;
         margin-bottom: $base-spacing-unit;
+        padding: $base-spacing-unit / 2;
     }
 
-    &--item-status {
-        background: lighten($gray-color, 5%);
+    &--item-status-box {
+        border: 1px solid $gray-color;
+        border-radius: .5px;
+        height: $base-spacing-unit / 1.75;
         margin-right: $base-spacing-unit / 2;
-        width: $base-spacing-unit * 4;
+        margin-top: $base-spacing-unit / 5;
+        text-align: center;
+        width: $base-spacing-unit / 1.75;
 
         &:hover {
-            background: $gray-color;
-            cursor: pointer;
+            border: 2px solid $cool-color;
         }
-    }
 
-    &--item-description {
-        padding-bottom: $base-spacing-unit / 3;
-        padding-top: $base-spacing-unit / 3;
+        &--DONE {
+            border: 1px solid $cool-color;
+            background: $cool-color;
+        }
+
     }
 
     &--item-more {
-        align-self: center;
         text-align: center;
         width: $base-spacing-unit * 3;
+
+        &:hover {
+            cursor: pointer;
+            transform: rotate(20deg);
+        }
     }
 }

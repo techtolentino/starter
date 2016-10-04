@@ -1,20 +1,26 @@
 // store each checklist val
 var checkListItems = Array.prototype.slice.call(
-    document.getElementsByClassName("checklist--item-status")
+    document.getElementsByClassName("checklist--item-status-box")
 );
 
 checkListItems.forEach(function(item){
     var checkBox = item.getAttribute("id");
 
-    // check checkboxes if they're stored
-    if (window.localStorage.getItem(checkBox) === "true") {
-        item.setAttribute("checked", "checked");
+    if (!window.localStorage.getItem(checkBox) || window.localStorage.getItem(checkBox) === "incomplete") {
+        item.classList.remove("checklist--item-status-box--DONE");
+    } else {
+        item.classList.add("checklist--item-status-box--DONE");
     }
 
     // saving checkbox to store
     item.addEventListener("click", function() {
-        window.localStorage.setItem(checkBox, item.checked)
-        console.log(localStorage);
+        if (!window.localStorage.getItem(checkBox) || window.localStorage.getItem(checkBox) === "incomplete") {
+            window.localStorage.setItem(checkBox, "done")
+            item.classList.add("checklist--item-status-box--DONE");
+        } else {
+            window.localStorage.setItem(checkBox, "incomplete")
+            item.classList.remove("checklist--item-status-box--DONE");
+        }
     });
 });
 
