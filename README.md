@@ -1,5 +1,5 @@
 #Starter
-#### An local storage based checklist
+#### A localStorage based checklist
 
 ### Maker
 [Randy Tolentino](http://randytolentino.com/)
