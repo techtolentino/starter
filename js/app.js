@@ -1,7 +1,17 @@
 // store each checklist val
-var checkListItems = Array.prototype.slice.call(
-    document.getElementsByClassName("checklist--item-status-box")
-);
+var timeOut,
+    checkListItems = Array.prototype.slice.call(
+        document.getElementsByClassName("checklist--item-status-box")
+    );
+
+// scroll to top function
+function scrollToTop() {
+    if (document.body.scrollTop!=0 || document.documentElement.scrollTop!=0){
+        window.scrollBy(0,-50);
+        timeOut=setTimeout('scrollToTop()',11);
+    }
+    else clearTimeout(timeOut);
+}
 
 checkListItems.forEach(function(item){
     var checkBox = item.getAttribute("id");
@@ -31,6 +41,8 @@ document.getElementById('checklist--submit').addEventListener("click", function(
     checklist.reset();
     window.localStorage.clear();
     checkListItems.forEach(function(item) {
-        item.removeAttribute("checked")
+        item.classList.remove("checklist--item-status-box--DONE");
     });
+
+    scrollToTop();
 });
