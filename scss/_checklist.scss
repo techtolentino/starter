@@ -1,9 +1,23 @@
 .checklist {
-    &--info {
+    &--section {
+        padding-bottom: $base-spacing-unit;
+    }
+
+    &--group {
         border: 1px solid $gray-color;
+
+        &:not(:last-child) {
+            border-bottom: 0;
+        }
+
+        &:nth-child(odd) {
+            background: $light-gray-color;
+        }
+    }
+
+    &--info {
         display: flex;
         justify-content: space-around;
-        margin-bottom: $base-spacing-unit;
         padding: $base-spacing-unit / 2;
     }
 
@@ -35,5 +49,27 @@
             cursor: pointer;
             transform: rotate(20deg);
         }
+    }
+
+    &--submit {
+        background: $cool-color;
+        border: 1px solid transparent;
+        border-radius: 1px;
+        color: $background-color;
+        font-size: .875em;
+        padding-bottom: $base-spacing-unit / 2;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: $base-spacing-unit / 2;
+        transition: background .25s, color .25s;
+
+        &:hover {
+            background: darken($cool-color, 10%);
+        }
+
+        &:focus {
+            outline: none;
+        }
+
     }
 }
