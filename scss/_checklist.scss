@@ -29,6 +29,7 @@
         margin-top: $base-spacing-unit / 5;
         text-align: center;
         width: $base-spacing-unit / 1.75;
+        transition: background .15s, border .15s;
 
         &:hover {
             border: 2px solid $cool-color;
@@ -37,6 +38,7 @@
         &--DONE {
             background: $cool-color;
             border: 1px solid $cool-color;
+            transition: background .15s, border .15s;
         }
 
     }
