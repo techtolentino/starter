@@ -28,8 +28,8 @@
         margin-right: $base-spacing-unit / 2;
         margin-top: $base-spacing-unit / 10;
         text-align: center;
-        width: $base-spacing-unit / 1.75;
         transition: background .15s, border .15s;
+        width: $base-spacing-unit / 1.75;
 
         &:hover {
             border: 2px solid $cool-color;
