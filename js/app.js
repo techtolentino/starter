@@ -46,3 +46,14 @@ document.getElementById('checklist--submit').addEventListener("click", function(
 
     scrollToTop();
 });
+
+(function setExpandListener() {
+    var readMore = document.querySelectorAll('.checklist--item-more')
+    for (var i = 0; i < readMore.length; i++) {
+        readMore[i].addEventListener('click', toggleExtraInfo)
+    }
+})()
+
+function toggleExtraInfo(e) {
+    e.target.previousElementSibling.classList.toggle('hidden')
+}
