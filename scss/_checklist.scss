@@ -22,26 +22,33 @@
     }
 
     &--item-status-box {
+        background-color: $background-color;
         border: 1px solid $gray-color;
         border-radius: .5px;
         height: $base-spacing-unit / 1.75;
         margin-right: $base-spacing-unit / 2;
         margin-top: $base-spacing-unit / 10;
         text-align: center;
-        background-color: $background-color;
         transition: background .05s, border .05s;
         width: $base-spacing-unit / 1.75;
 
         &:hover {
-            border: 2px solid $cool-color;
+            border: 2px solid $gray-color;
         }
 
         &--DONE {
-            background: $cool-color;
-            border: 1px solid $cool-color;
+            border: 1px solid $gray-color;
+            position: relative;
             transition: background .05s, border .05s;
-        }
 
+            &::after {
+                color: $cool-color;
+                content: '✓';
+                left: 3px;
+                position: absolute;
+                top: -4px;
+            }
+        }
     }
 
     &--item-more {
@@ -75,6 +82,4 @@
         }
 
     }
-
-
 }
