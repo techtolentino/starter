@@ -9,14 +9,14 @@ $base-line-height: 1.65;
 $base-spacing-unit: 2em;
 
 // Colors
-$background-color: #f2f2f2;
-$accent-color: #FF1C52;
-$cool-color: #34CAA7;
-$gray-color: #B9B9B9;
+$background-color: #f7f7f7;
+$accent-color: #2e10ff;
+$cool-color: #2bade2;
+$gray-color: #d7d8e0;
 $dark-gray-color: darken($gray-color, 40%);
-$light-gray-color: lighten($gray-color, 15%);
-$black-color: #323232;
-$text-color: #5E5E5E;
+$light-gray-color: lighten($gray-color, 10%);
+$black-color: #040404;
+$text-color: #5e5e5e;
 
 // Width of the content area
 $extra-extra-large-screen: 90em;
