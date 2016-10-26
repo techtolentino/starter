@@ -46,7 +46,8 @@ document.getElementById('checklist--submit').addEventListener("click", function(
 
     scrollToTop();
 });
-function myFunction() {
+/*Nav*/
+function navToggle() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
         x.className += " responsive";
