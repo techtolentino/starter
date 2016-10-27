@@ -40,14 +40,14 @@
             border: 1px solid $gray-color;
             position: relative;
             transition: background .05s, border .05s;
+        }
 
-            &::after {
-                color: $cool-color;
-                content: '✓';
-                left: 3px;
-                position: absolute;
-                top: -4px;
-            }
+        &--DONE::after {
+            color: $cool-color;
+            content: '✓';
+            left: 3px;
+            position: absolute;
+            top: -4px;
         }
     }
 
