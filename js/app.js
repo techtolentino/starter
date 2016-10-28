@@ -46,3 +46,15 @@ document.getElementById('checklist--submit').addEventListener("click", function(
 
     scrollToTop();
 });
+
+function showMoreInformation(id){
+    document.getElementById('readMore-'+id).style.display='none';
+    document.getElementById('readMore-'+id).nextElementSibling.style.display='block';
+    document.getElementById('readMore-'+id).nextElementSibling.nextElementSibling.style.display='block';
+}
+
+function hideMoreInformation(id){
+   document.getElementById('hideMore-'+id).style.display='none';
+   document.getElementById('hideMore-'+id).nextElementSibling.style.display='none';
+   document.getElementById('hideMore-'+id).previousElementSibling.style.display='block';
+}
