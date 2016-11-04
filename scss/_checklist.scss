@@ -51,14 +51,21 @@
         }
     }
 
-    &--item-more {
-        text-align: center;
-        width: $base-spacing-unit * 3;
+    &--item-more-toggle {
+      display: none;
+    }
 
-        &:hover {
-            cursor: pointer;
-            transform: rotate(20deg);
-        }
+    &--item-more-toggle-label {
+      cursor: pointer;
+    }
+
+    &--item-more {
+      display: none;
+      margin-top: 14px;
+    }
+
+    &--item-more-toggle:checked ~ .checklist--item-more {
+      display: block;
     }
 
     &--submit {
